@@ -1,0 +1,47 @@
+     body{
+        margin: 0;
+        padding: 0;
+        font-family: arial;
+      }
+
+      .container-fluid{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        animation: animate 16s ease-in-out infinite;
+        background-size: cover;
+      }
+
+     
+
+     
+      @keyframes animate{
+        0%, 100%{
+          background-image: url(resources/purple.jpg);
+        }
+        25%{
+          background-image: url(resources/grey.jpg);
+        }
+        50%{
+         background-image: url(resources/black.jpg); 
+        }
+        75%{
+          background-image: url(resources/bluish-black.jpg);
+        }
+      }
+
+
+        @media screen and (min-width: 1600px) {
+    .container {
+        max-width: (1600px - @grid-gutter-width);
+    }
+}
+@media screen and (min-width: 1900px) {
+    .container {
+        max-width: (1900px - @grid-gutter-width);
+    }
+}
+
+

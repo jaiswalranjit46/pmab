@@ -1,0 +1,46 @@
+body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .center{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+
+    .tablink {
+      background-color: #555;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      margin: 2.5%;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 45%;
+    }
+
+    .tablink:hover {
+      background-color: #777;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      color: black;
+      display: none;
+      padding: 50px;
+      text-align: center;
+    }
+
+    form input{
+      margin: 10px;
+    }
+
+    form .submit{
+      border-radius: 12px; 
+      font-size: 20px; 
+      color: white;
+    }
+

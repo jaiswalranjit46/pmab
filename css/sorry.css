@@ -1,0 +1,26 @@
+.center{
+	margin-top:15%;
+	margin-left:25%;
+	text-align: center;
+	width: 50%;
+}
+
+.center h1{
+	font-size: 80px;
+	margin: 25px;
+	padding: 25px;
+}
+
+.center p{
+	font-size: 25px;
+}
+
+.center a{
+	font-size: 30px;
+	color: green;
+	text-decoration: none;
+}
+.center a:hover{
+	color: green;
+	font-size: 31px;
+}

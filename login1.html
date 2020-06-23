@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: "Lato", sans-serif;
+		}
+		
+		.center{
+		width:50%;
+		margin-top:15%;
+		margin-left: 25%;
+		transition: transform(50%,50%);
+		}
+
+		.tablink {
+		  background-color: #555;
+		  color: white;
+		  float: left;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  margin: 2.5%;
+		  padding: 14px 16px;
+		  font-size: 17px;
+		  width: 45%;
+		}
+
+		.tablink:hover {
+		  background-color: #777;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		  color: black;
+		  display: none;
+		  padding: 50px;
+		  text-align: center;
+		}
+
+		form .submit{
+			background-color: #ed4c4c; 
+			border-radius: 12px; 
+			font-size: 20px; 
+			color: white;
+		}
+	</style>
+	<title>login1- the sample login page</title>
+</head>
+<body>
+	<div class="center">
+
+		<div id="Login" class="tabcontent">
+  			<div class="heading">
+				<h1>login</h1>
+			</div>
+			<div class="section">
+				<form>
+					<input type="text" name="nName" class="form-control" placeholder="nick name" required>
+      				<input type="password" name="pass" class="form-control" placeholder=" password" required>  
+      				<button class="submit btn btn-success" name="login"> submit </button>
+				</form>
+			</div>
+			<div class="footer">			
+				<button class="tablink" onclick="openCity('Login', this)" id="defaultOpen">Login     </button>
+				<button class="tablink" onclick="openCity('Paris', this)">Sign up</button>
+			</div>
+		</div>
+
+
+
+		<div id="Paris" class="tabcontent">
+  			<div class="heading">
+				<h1>login</h1>
+			</div>
+			<div class="section">
+				<form action ="registration.php" method="POST">
+					<input type="text" name="fName" class="form-control" placeholder="your first name" required>
+				    <input type="text" name="lName" class="form-control" placeholder="your last name" required>
+				    <input type="text" name="nName" class="form-control" placeholder="your nick name" required>
+				    <input type="text" name="cNo" class="form-control" placeholder="contact Number" required>
+				   	<input type="text" name="add1" class="form-control" placeholder="address 1" required>
+				    <input type="text" name="add2" class="form-control" placeholder="address 2" required>
+				    <input type="password" name="pass1" class="form-control" placeholder="new password" required>
+				    <input type="password" name="pass2" class="form-control" placeholder="confirm password" required>
+      				<button type="submit"class="btn btn-primary" name="login"> submit </button>
+				</form>
+			</div>
+			<div class="footer">			
+				<button class="tablink" onclick="openCity('Login', this)" id="defaultOpen">Login     </button>
+				<button  class="tablink" onclick="openCity('Paris', this)">Sign up</button>
+			</div>
+		</div>
+
+	</div>
+
+<script>
+function openCity(cityName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  
+  document.getElementById(cityName).style.display = "block";
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
