@@ -27,8 +27,43 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+<style>
+#section1 {
+  margin-right:10px;	
+  height: 120px;
+  background-color:#474e5d;
+  margin-bottom:10Px;
+  color: white;
+}
+
+#section2 {
+  margin-right:10px;	
+  height: 120px;
+  background-color:#474e5d;
+  margin-bottom:40Px;
+  color: white;
+}
+.cont { 
+  height: 100vh;
+
+
+}
+.can{
+	margin-left:20px;
+	
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+</style>
   </head>
 <body>
+<div class="cont">
 
     <!-- navbar -->
 
@@ -46,7 +81,7 @@
 
 <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">
-<img src="<?= $_SESSION['avatar'] ?>"  width="80"height="80">
+<img src="<?= $_SESSION['avatar'] ?>"  width="78"height="50" class="avatar">
 <br />
 </a>
     <div class="dropdown-content">
@@ -76,7 +111,7 @@
           <h2>
            <div class="input-group mb-3">
             <form class="form-inline" role= "form" action="search1.php" method="POST">
-              <input type="text" class="form-control-lg" placeholder="search..." name="search_1"style="width: 600px; margin-right: -10px;">
+              <input type="text" class="form-control-lg" placeholder="search..." name="search_1"style="width: 590px; margin-right: -10px;">
               <div class="input-group-append">
                 <button class="btn-lg btn-success" type="submit" name="search_2" >search</button>
               </div>
@@ -88,8 +123,19 @@
         </div>
       </div>
     </div>
+  
+</div>
+<div class="can">
+<h3>    Popular Now</h3>
+<div class="main" id="section1">
+  <h2>Section 1</h2>
+  </div>
+  <h3>    Based on Your Past Activity</h3>
+<div class="main" id="section2">
 
-
+  <h2>Section 2</h2>
+  </div>
+</div>
 
 
 
