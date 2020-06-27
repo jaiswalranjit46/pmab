@@ -13,10 +13,10 @@ $row;
 echo "total no of rows: ".$row1;
 echo "<table>";
  echo "<tr>";
-echo "<td>Seller Name</td>";
- echo "<td>Seller Addreass 1</td>";
- echo "<td>Seller Address2</td>";
- echo "<td>Seller Contact</td>";
+echo "<td>Buyer Name</td>";
+ echo "<td>Buyer Addreass 1</td>";
+ echo "<td>Buyer Address2</td>";
+ echo "<td>Buyer Contact</td>";
  echo "<td>Created At</td>";
  echo "</tr>";
  while($row = mysqli_fetch_array($result)){ 
@@ -35,7 +35,7 @@ echo "<table>";
  echo "<td>Seller Addreass 1</td>";
  echo "<td>Seller Address2</td>";
  echo "<td>Seller Contact</td>";
- echo "<td>Created At</td>";
+ echo "<td>Book Name</td>";
  echo "</tr>";
  while($row1 = mysqli_fetch_array($result1)){ 
  echo "<tr>"; 
