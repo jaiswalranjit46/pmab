@@ -31,7 +31,7 @@
         $avatar_path = $mysqli->real_escape_string('images/'.$_FILES['avatar']['name']);
 		$password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
 		$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-
+        $_SESSION['username'] = $username;
 		
 		if (empty($firstname)) { array_push($errors, "firstname is required"); }
 		if (empty($lastname)) { array_push($errors, "lastname is required"); }

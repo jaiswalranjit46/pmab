@@ -1,4 +1,5 @@
 <?php 
+    
 	session_start(); 
 
 	if (!isset($_SESSION['username'])) {
@@ -13,21 +14,19 @@
 	}
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-
+  <link rel="stylesheet" type="text/css" href="coding.css">
   <link rel="stylesheet" type="text/css" href="css/index(1).css">
-    <link rel="stylesheet" type="text/css" href="coding.css">
   <title>books</title>
   <meta charset="utf-8" content="width = device-width, initial-scale = 1.0">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-<style>
+   
+   <style>
 #section1 {
   margin-right:10px;	
   height: 120px;
@@ -64,7 +63,6 @@
   </head>
 <body>
 <div class="cont">
-
     <!-- navbar -->
 
       <nav class=" navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
@@ -99,7 +97,6 @@
 
 
 
-
 <!-- main section -->
 
 
@@ -111,7 +108,7 @@
           <h2>
            <div class="input-group mb-3">
             <form class="form-inline" role= "form" action="search1.php" method="POST">
-              <input type="text" class="form-control-lg" placeholder="search..." name="search_1"style="width: 590px; margin-right: -10px;">
+             <input type="text" class="form-control-lg" placeholder="search..." name="search_1"style="width: 590px; margin-right: -10px;">
               <div class="input-group-append">
                 <button class="btn-lg btn-success" type="submit" name="search_2" >search</button>
               </div>
@@ -123,8 +120,8 @@
         </div>
       </div>
     </div>
-  
-</div>
+	
+	</div>
 <div class="can">
 <h3>    Popular Now</h3>
 <div class="main" id="section1">
@@ -141,6 +138,8 @@
 
 
 
+
+<form  method="POST" action="sell1.php">
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -156,20 +155,21 @@
 
 
 
+                       
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="Yname">your name</label>
-                                <input type="text" class="form-control" id="Yname" placeholder="Adarsh kunwar" required style="float: left">
+                                <input type="text" class="form-control"  name="sellername" id="Yname" placeholder="Adarsh kunwar" required style="float: left">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="Bname">your book name</label>
-                                <input type="text" class="form-control" id="Bname" placeholder="rich dad poor dad" required style="float: left">
+                                <input type="text" class="form-control" name="bookname" id="Bname" placeholder="rich dad poor dad" required style="float: left">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="Aname">author name</label>
-                                <input type="text" class="form-control" id="Aname" placeholder="Robert T. Kiyosaki" required style="float: left">
+                                <input type="text" class="form-control"  name="authorname" id="Aname" placeholder="Robert T. Kiyosaki" required style="float: left">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="Pdate">published year</label>
@@ -183,7 +183,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">Nrs</span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="600" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" name="markedprice" placeholder="600" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
@@ -192,7 +192,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">Nrs</span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="600" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" name="desiredprice" placeholder="600" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
 
@@ -202,7 +202,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="Cbook">My book is</label>
-                                <select class="custom-select" id="Cbook" required>
+                                <select class="custom-select" name="quality" id="Cbook" required>
                                     <option selected disabled value="">Choose...</option>
                                     <option value="GAN">good as new</option>
                                     <option value="TBR">tattred but readable</option>
@@ -215,7 +215,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">+977</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" name="sellercontact" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
 
@@ -224,25 +224,27 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="Add1">Address 1</label>
-                                    <input type="text" class="form-control" id="Add1" placeholder="Butwal-10, devinagar" required style="float: left">
+                                    <input type="text" class="form-control" name="selleraddress1" id="Add1" placeholder="Butwal-10, devinagar" required style="float: left">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="Add2">Address 2</label>
-                                    <input type="text" class="form-control" id="Add2" placeholder="Dhaulagiri path" required style="float: left">
+                                    <input type="text" class="form-control" id="Add2" name="selleraddress2" placeholder="Dhaulagiri path" required style="float: left">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                                     </div>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                        <input type="file" class="custom-file-input"  name="book" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
                                         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                     </div>
                                 </div>
                             </div>
-
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Sell</button>
+                             <form action="sell1.php" method="POST">
+                            <input type="submit" value="Sell Now" name="sellbook">
+							</form>
                         </div>
+						
 
 
 
@@ -254,14 +256,8 @@
     </div>
   </div>
 </div>
+</form>
 
-
-
-	
-
-		
-	
-	
 
 
 </body>

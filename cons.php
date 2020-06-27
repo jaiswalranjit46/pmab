@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","","pmapp");
+$conn=mysqli_connect("localhost","root","","accounts");
 if(!$conn)
 {
 echo "sorry";
