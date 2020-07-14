@@ -54,7 +54,7 @@ body{
 <?php
 
 
-include 'cons.php';
+include 'co.php';
 
 $sqli = "SELECT * FROM faqs"; 
 $result = mysqli_query($conn, $sqli); 

@@ -83,7 +83,7 @@
 <br />
 </a>
     <div class="dropdown-content">
-      <a href="form.php">MyActivity</a>
+      <a href="profile.php">MyActivity</a>
       <a ><form action="" method="POST">
 	  <input type="submit" value="logout" name="logout">
 	  </form></a>

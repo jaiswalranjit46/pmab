@@ -30,7 +30,7 @@
                 if ($mysqli->query($sql) === true){
                    
                     //redirect the user to welcome.php
-                    header("location: index1.php");
+                   // header("location: index1.php");
                  }
                 else {
                     $_SESSION['message'] = 'User could not be added to the database!';
@@ -50,11 +50,10 @@
  
 
 ?>
-<link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="form.css" type="text/css">
+
 <div class="body-content">
   <div class="module">
-    <h1>Upload a password</h1>
+    <h1>Upload a avatar</h1>
     <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
       

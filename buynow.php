@@ -114,7 +114,7 @@ $sql = "INSERT INTO sellerinfo (sellername, sellerAddress1,sellerAddress2,contac
 
 if ($sconn->query($sql) === TRUE) {
     echo "New record created successfully";
-	header('location:buy.php');
+	header('location:index1.php');
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
