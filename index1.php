@@ -70,12 +70,72 @@
 	 
 <ul class="navbar-nav ml-auto">
 
-<li ><a href="#">Home</a></li>
-<li ><a href="#" >Categorie</a></li>
-<li ><a href="comming soon.html" >Events</a></li>
-<li ><a href="comming soon.html" >Achivemet</a></li>
-<li ><a href="faq.php" >FAQ</a></li>
-<li ><a href="aboutus.html" >About Us</a></li>
+<li ><a href="<?php 
+
+    require_once("connection.php");
+    $query = " select * from records WHERE User_Name= 'Home' ";
+    $result = mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($result))
+    {
+    $UserEmail = $row['User_Email'];
+    echo $UserEmail; 
+    }  
+?>">Home</a></li>
+<li ><a href="<?php 
+
+    require_once("connection.php");
+    $query = " select * from records WHERE User_Name= 'Categorie' ";
+    $result = mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($result))
+    {
+    $UserEmail = $row['User_Email'];
+    echo $UserEmail; 
+    }  
+?>" >Categorie</a></li>
+<li ><a href="<?php 
+
+    require_once("connection.php");
+    $query = " select * from records WHERE User_Name= 'Events' ";
+    $result = mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($result))
+    {
+    $UserEmail = $row['User_Email'];
+    echo $UserEmail; 
+    }  
+?>" >Events</a></li>
+<li ><a href="<?php 
+
+    require_once("connection.php");
+    $query = " select * from records WHERE User_Name= 'Achivement' ";
+    $result = mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($result))
+    {
+    $UserEmail = $row['User_Email'];
+    echo $UserEmail; 
+    }  
+?>" >Achivemet</a></li>
+<li ><a href="<?php 
+
+    require_once("connection.php");
+    $query = " select * from records WHERE User_Name= 'FAQ' ";
+    $result = mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($result))
+    {
+    $UserEmail = $row['User_Email'];
+    echo $UserEmail; 
+    }  
+?>" >FAQ</a></li>
+<li ><a href="<?php 
+
+    require_once("connection.php");
+    $query = " select * from records WHERE User_Name= 'About Us' ";
+    $result = mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($result))
+    {
+    $UserEmail = $row['User_Email'];
+    echo $UserEmail; 
+    }  
+?>" >About Us</a></li>
 
 <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">
